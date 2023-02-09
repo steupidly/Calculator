@@ -1,0 +1,36 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var nilai1 int
+	var nilai2 int
+	fmt.Println(("\t Selamat datang di Kalkulator Sederhana"))
+	fmt.Println("\t -------------------------")
+
+	operasi := "1.Penambahan (+)\n 2.Pengurangan (-) \n 3.Perkalian (*) \n 4.Pembagian (/)"
+
+	fmt.Println("Silahkan pilih operasi\n", operasi)
+	fmt.Scanln(&operasi)
+	fmt.Println("Silahkan masukan nilai pertama")
+	fmt.Scanln(&nilai1)
+
+	fmt.Println("Silahkan masukan nilai kedua")
+	fmt.Scan(&nilai2)
+
+	if operasi == "+" {
+		fmt.Println(nilai1, operasi, nilai2, "=", nilai1+nilai2)
+	} else if operasi == "-" {
+		fmt.Println(nilai1, operasi, nilai2, "=", nilai1-nilai2)
+	} else if operasi == "*" {
+		fmt.Println(nilai1, operasi, nilai2, "=", nilai1*nilai2)
+	} else if operasi == "/" && nilai2 != 0{
+		fmt.Println(nilai1, operasi, nilai2, "=", nilai1/nilai2)
+	} else if operasi == "/" && nilai2 == 0{
+		fmt.Println(nilai1, operasi, nilai2, "=", 0)
+	} else {
+		fmt.Println("Operasi salah")
+	}
+
+}
